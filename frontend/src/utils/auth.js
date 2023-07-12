@@ -53,3 +53,4 @@ export const checkToken = (jwt) => {
     },
   }).then(checkRes);
 };
+
