@@ -129,7 +129,7 @@ class Api {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
       body: JSON.stringify({
         name: data.name,
@@ -144,7 +144,7 @@ class Api {
     const response = await fetch(`${this._baseUrl}/users/me`, {
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
     });
     return this._handleSendingRequest(response);
@@ -155,7 +155,7 @@ class Api {
     const response = await fetch(`${this._baseUrl}/cards`, {
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
     });
     return this._handleSendingRequest(response);
@@ -167,7 +167,7 @@ class Api {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
       body: JSON.stringify(data),
     });
@@ -192,7 +192,7 @@ class Api {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
     });
     return this._handleSendingRequest(response);
@@ -204,7 +204,7 @@ class Api {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
     });
     return this._handleSendingRequest(response);
@@ -216,7 +216,7 @@ class Api {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
       body: JSON.stringify({
         avatar: data.avatar,
