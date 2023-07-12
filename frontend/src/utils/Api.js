@@ -152,7 +152,7 @@ class Api {
 
   //downloading cards from the server
   async getInitialCards() {
-    const response = await fetch(${this._baseUrl}/cards, {
+    const response = await fetch(`${this._baseUrl}/cards`, {
       headers: {
         "Content-Type": "application/json",
         authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -188,7 +188,7 @@ class Api {
 
   //add like for the cards
   async addLike(cardId) {
-    const response = await fetch(${this._baseUrl}/cards/${cardId}/likes, {
+    const response = await fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
