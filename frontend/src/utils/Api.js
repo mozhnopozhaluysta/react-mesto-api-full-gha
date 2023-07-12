@@ -180,7 +180,7 @@ class Api {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("token")}`,
+        authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
     });
     return this._handleSendingRequest(response);
