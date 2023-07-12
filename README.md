@@ -1,3 +1,7 @@
+## Cтатус тестов
+
+- [![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
+
 ## Учебный проект: "react-mesto-api-full-gha"
 
 ## Описание проекта
